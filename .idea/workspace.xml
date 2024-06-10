@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb355ed7-ed62-4313-ae9b-fe5784ec8abe" name="Changes" comment="" />
+    <list default="true" id="cb355ed7-ed62-4313-ae9b-fe5784ec8abe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081/storage_v2/_src_/database/postgres.edMnLQ/schema/online_shop.YtmpGw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081/storage_v2/_src_/database/postgres.edMnLQ/schema/online_shop.YtmpGw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/userModule/org/example/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/repository/admin/AdminRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/userModule/org/example/repository/admin/AdminRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/repository/baseentity/BaseEntityRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/repository/baseentity/BaseEntityRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/repository/baseentitygenric/BaseEntityGenericRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/userModule/org/example/repository/baseentitygenric/BaseEntityGenericRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/repository/baseuser/BaseUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/userModule/org/example/repository/baseuser/BaseUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/repository/baseuser/BaseUserRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/userModule/org/example/repository/baseuser/BaseUserRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/repository/user/UserRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/userModule/org/example/repository/user/UserRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/userModule/org/example/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/SignUpMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/SignUpMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,11 +126,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717786637427</updated>
-      <workItem from="1717786638477" duration="11081000" />
+      <workItem from="1717786638477" duration="15571000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/../loginmoudle/userModule/src/main/java/org/example/repository/baseuser/BaseUserRepositoryImpl.java</url>
+          <line>21</line>
+          <properties class="org.example.repository.baseuser.BaseUserRepositoryImpl" method="findByUsernameAndPassword">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

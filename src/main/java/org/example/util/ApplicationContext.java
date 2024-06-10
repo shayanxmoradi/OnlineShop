@@ -3,6 +3,7 @@ package org.example.util;
 
 
 import org.example.config.DataSource;
+import org.example.entity.User;
 import org.example.menu.LoggedInMenu;
 import org.example.menu.LoginMenu;
 import org.example.menu.MainMenu;
@@ -29,11 +30,12 @@ public class ApplicationContext {
         Message message = new Message();
         Connection connection = DataSource.getConnection();
 
-        UserRepository userRepo = new UserRepositoryImpl(connection);
+
+        UserRepository userRepo = new UserRepositoryImpl(connection, User::new);
         AuthHolder authHolder = new AuthHolder();
 
 
-        UserService userService = new UserServiceImpl(userRepo,authHolder);
+        UserService userService = new UserServiceImpl(userRepo,authHolder,userRepo);
         SignUpMenu signUpMenu = new SignUpMenu(input, message, userService);
 
         LoggedInMenu loggedInMenu = new LoggedInMenu(input, message);

@@ -38,7 +38,9 @@ public class SignUpMenu {
                     System.out.println(MESSAGE.getInputMessage("lastname"));
                     String lastname = INPUT.scanner.next();
 
-                    User user = new User(username, password);
+                    User user = new User();
+                    user.setUsername(username);
+                    user.setPassword(password);
                     user.setFirstName(firstname);
                     user.setLastName(lastname);
                     if (USER_SERVICE.signUp(user)) {
