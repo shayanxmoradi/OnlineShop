@@ -8,5 +8,4 @@ public class ElektonicProducts extends BaseProduct{
         super(name, price, quantity);
         this.elektroProductTypes = elektroProductTypes;
     }
-
 }
