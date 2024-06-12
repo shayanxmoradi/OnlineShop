@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb355ed7-ed62-4313-ae9b-fe5784ec8abe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/AllProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/CheckoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/ShoppingBagPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/BaseProductRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/BaseProductRepoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/BaseProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/BaseProductServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081/storage_v2/_src_/database/postgres.edMnLQ/schema/online_shop.YtmpGw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081/storage_v2/_src_/database/postgres.edMnLQ/schema/online_shop.YtmpGw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/LoggedInMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/LoggedInMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/LoginMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/AllProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/AllProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
