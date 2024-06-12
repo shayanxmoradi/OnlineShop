@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cb355ed7-ed62-4313-ae9b-fe5784ec8abe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/repository/baseentitygenric/BaseEntityGenericRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/userModule/org/example/repository/baseentitygenric/BaseEntityGenericRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/repository/user/UserRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/userModule/org/example/repository/user/UserRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/products/BaseProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/products/BaseProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/BaseProductRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/BaseProductRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/AllProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/AllProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/BaseProductRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/BaseProductRepoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/BaseProductServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/BaseProductServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="features" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -52,7 +54,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "features",
+    "git-widget-placeholder": "product",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/shayan/Desktop/JAVA /projects/HW/hw9/OnlineShop/src/main/java/org/example/menu",
     "node.js.detected.package.eslint": "true",
@@ -141,6 +143,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/services/BaseProductService.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -48,8 +48,8 @@ public class ApplicationContext {
 
         SignUpMenu signUpMenu = new SignUpMenu(input, message, userService);
         ShoppingBagPage shoppingBagPage = new ShoppingBagPage(input,message);
-        AllProductPage allProductPage = new AllProductPage(input,message,baseProductService);
         CheckoutPage checkoutPage = new CheckoutPage(input,message);
+        AllProductPage allProductPage = new AllProductPage(input,message,baseProductService,shoppingBagPage,checkoutPage);
         LoggedInMenu loggedInMenu = new LoggedInMenu(input, message,shoppingBagPage,allProductPage,checkoutPage);
 
 
