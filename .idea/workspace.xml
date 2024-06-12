@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb355ed7-ed62-4313-ae9b-fe5784ec8abe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/shoppingbag/ShoppingBagRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/shoppingbag/ShoppingBagRepoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/shoppingbag/ShoppingBagService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/shoppingbag/ShoppingBagServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/BagHolder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/AllProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/AllProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/BaseProductRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/BaseProductRepoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/ShoppingBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/ShoppingBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/products/ShoppingBagItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/products/ShoppingBagItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/SignUpMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/SignUpMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,15 +25,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="features" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,7 +60,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "product",
+    "git-widget-placeholder": "sbag",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/shayan/Desktop/JAVA /projects/HW/hw9/OnlineShop/src/main/java/org/example/menu",
     "node.js.detected.package.eslint": "true",
@@ -131,6 +137,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
