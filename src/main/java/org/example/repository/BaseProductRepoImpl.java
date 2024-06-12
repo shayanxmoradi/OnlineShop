@@ -55,7 +55,6 @@ public class BaseProductRepoImpl
         double price = resultSet.getDouble("price");
         int quantity = resultSet.getInt("quantity");
         String subProductType = resultSet.getString("sub_product_type");
-        System.out.println(subProductType);
         ElektroProductTypes elektroProductType;
         try {
 
@@ -75,7 +74,6 @@ public class BaseProductRepoImpl
         double price = resultSet.getDouble("price");
         int quantity = resultSet.getInt("quantity");
         String subProductType = resultSet.getString("sub_product_type");
-        System.out.println(subProductType);
         ShoeProductType shoeProductType;
         try {
 
