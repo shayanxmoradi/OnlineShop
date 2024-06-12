@@ -4,10 +4,13 @@ package org.example.util;
 
 import org.example.config.DataSource;
 import org.example.entity.User;
-import org.example.menu.LoggedInMenu;
+import org.example.menu.loggedin_sub_menus.AllProductPage;
+import org.example.menu.loggedin_sub_menus.CheckoutPage;
+import org.example.menu.loggedin_sub_menus.LoggedInMenu;
 import org.example.menu.LoginMenu;
 import org.example.menu.MainMenu;
 import org.example.menu.SignUpMenu;
+import org.example.menu.loggedin_sub_menus.ShoppingBagPage;
 import org.example.menu.util.Input;
 import org.example.menu.util.Message;
 import org.example.repository.user.UserRepository;
@@ -37,8 +40,11 @@ public class ApplicationContext {
 
         UserService userService = new UserServiceImpl(userRepo,authHolder,userRepo);
         SignUpMenu signUpMenu = new SignUpMenu(input, message, userService);
+        ShoppingBagPage shoppingBagPage = new ShoppingBagPage(input,message);
+        AllProductPage allProductPage = new AllProductPage(input,message);
+        CheckoutPage checkoutPage = new CheckoutPage(input,message);
+        LoggedInMenu loggedInMenu = new LoggedInMenu(input, message,shoppingBagPage,allProductPage,checkoutPage);
 
-        LoggedInMenu loggedInMenu = new LoggedInMenu(input, message);
         LoginMenu loginMenu = new LoginMenu(input, message, userService, authHolder, loggedInMenu);
 
          mainMenu = new MainMenu(input, message, signUpMenu, loginMenu);

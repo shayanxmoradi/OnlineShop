@@ -1,18 +1,19 @@
-package org.example.menu;
+package org.example.menu.loggedin_sub_menus;
 
 import org.example.menu.util.Input;
 import org.example.menu.util.Message;
 
-public class LoggedInMenu {
+public class AllProductPage {
     private final Message MESSAGE;
     private final Input INPUT;
 
-    public LoggedInMenu( Input input,Message message) {
+    public AllProductPage( Input input,Message message) {
         MESSAGE = message;
         INPUT = input;
     }
-
     public void show(){
-
+        System.out.println("hey here is list of all products");
     }
+
+
 }
