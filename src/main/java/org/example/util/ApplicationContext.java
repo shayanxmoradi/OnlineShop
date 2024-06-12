@@ -15,12 +15,16 @@ import org.example.menu.util.Input;
 import org.example.menu.util.Message;
 import org.example.repository.BaseProductRepo;
 import org.example.repository.BaseProductRepoImpl;
+import org.example.repository.shoppingbag.ShoppingBagRepo;
+import org.example.repository.shoppingbag.ShoppingBagRepoImpl;
 import org.example.repository.user.UserRepository;
 import org.example.repository.user.UserRepositoryImpl;
 import org.example.service.UserService;
 import org.example.service.UserServiceImpl;
 import org.example.services.BaseProductService;
 import org.example.services.BaseProductServiceImp;
+import org.example.services.shoppingbag.ShoppingBagService;
+import org.example.services.shoppingbag.ShoppingBagServiceImpl;
 
 
 import java.sql.Connection;
@@ -39,14 +43,19 @@ public class ApplicationContext {
 
 
         UserRepository userRepo = new UserRepositoryImpl(connection, User::new);
-        BaseProductRepo baseProductRepo = new BaseProductRepoImpl(connection);
         AuthHolder authHolder = new AuthHolder();
+        BagHolder bagHolder = new BagHolder();
+
+        BaseProductRepo baseProductRepo = new BaseProductRepoImpl(connection);
+        ShoppingBagRepo shoppingBagRepo = new ShoppingBagRepoImpl(connection,authHolder);
 
 
         UserService userService = new UserServiceImpl(userRepo,authHolder,userRepo);
         BaseProductService baseProductService = new BaseProductServiceImp(baseProductRepo);
 
-        SignUpMenu signUpMenu = new SignUpMenu(input, message, userService);
+        ShoppingBagService shoppingBagService = new ShoppingBagServiceImpl(shoppingBagRepo);
+
+        SignUpMenu signUpMenu = new SignUpMenu(input, message, userService,shoppingBagService);
         ShoppingBagPage shoppingBagPage = new ShoppingBagPage(input,message);
         CheckoutPage checkoutPage = new CheckoutPage(input,message);
         AllProductPage allProductPage = new AllProductPage(input,message,baseProductService,shoppingBagPage,checkoutPage);
