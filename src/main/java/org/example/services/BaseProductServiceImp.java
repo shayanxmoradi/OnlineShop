@@ -8,7 +8,7 @@ import org.example.service.BaseEntityService;
 import org.example.service.BaseEntityServiceImpl;
 import org.example.service.UserService;
 
-public class BaseProductServiceImp extends BaseEntityServiceImpl<BaseProduct,Long, BaseProductRepo<BaseProduct>>
+public class BaseProductServiceImp extends BaseEntityServiceImpl<BaseProduct,Long, BaseProductRepo>
         implements BaseProductService<BaseProduct> {
 
     public BaseProductServiceImp(BaseProductRepo baseRepository) {

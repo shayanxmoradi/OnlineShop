@@ -5,7 +5,7 @@ import org.example.repository.baseentitygenric.BaseEntityGenericRepository;
 
 import java.util.List;
 
-public interface BaseProductRepo<T extends BaseProduct>
-        extends BaseEntityGenericRepository<T, Long> {
+public interface BaseProductRepo
+        extends BaseEntityGenericRepository<BaseProduct, Long> {
 
 }
