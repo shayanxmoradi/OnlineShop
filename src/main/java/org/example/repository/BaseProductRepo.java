@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface BaseProductRepo
         extends BaseEntityGenericRepository<BaseProduct, Long> {
+    List<BaseProduct> getAllProductsTogether();
 
 }

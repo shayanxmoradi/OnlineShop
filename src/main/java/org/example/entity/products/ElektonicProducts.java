@@ -8,4 +8,14 @@ public class ElektonicProducts extends BaseProduct {
         super(name, price, quantity);
         this.elektroProductTypes = elektroProductTypes;
     }
+
+    @Override
+    public String toString() {
+        return "ElektonicProducts{" +
+               "elektroProductTypes=" + elektroProductTypes +
+               ", name='" + name + '\'' +
+               ", price=" + price +
+               ", quantity=" + quantity +
+               '}';
+    }
 }

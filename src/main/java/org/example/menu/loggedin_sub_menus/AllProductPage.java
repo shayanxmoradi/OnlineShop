@@ -19,7 +19,7 @@ public class AllProductPage {
     }
 
     public void show() {
-        System.out.println(Arrays.toString(BASEPRODUCTSERVICE.findAll()));
+        System.out.println(BASEPRODUCTSERVICE.getAllProductsTogether());
 
         System.out.println("hey here is list of all products");
     }
