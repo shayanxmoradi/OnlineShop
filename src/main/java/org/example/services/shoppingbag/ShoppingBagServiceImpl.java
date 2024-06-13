@@ -4,6 +4,8 @@ import org.example.entity.ShoppingBag;
 import org.example.repository.shoppingbag.ShoppingBagRepo;
 import org.example.service.BaseEntityServiceImpl;
 
+import java.sql.SQLException;
+
 public class ShoppingBagServiceImpl extends BaseEntityServiceImpl<ShoppingBag,Long, ShoppingBagRepo>
         implements ShoppingBagService {
 
@@ -20,5 +22,10 @@ public class ShoppingBagServiceImpl extends BaseEntityServiceImpl<ShoppingBag,Lo
     @Override
     public void deleteShoppingBag(ShoppingBag shoppingBag) {
          baseRepository.deleteById(shoppingBag.getId());
+    }
+
+    @Override
+    public ShoppingBag getShoppingBagByUserId(Long id) throws SQLException {
+        return baseRepository.getShoppingBagByUserId(id);
     }
 }

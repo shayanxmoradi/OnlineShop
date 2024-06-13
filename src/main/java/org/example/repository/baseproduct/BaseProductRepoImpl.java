@@ -1,6 +1,5 @@
-package org.example.repository;
+package org.example.repository.baseproduct;
 
-import org.example.entity.User;
 import org.example.entity.enums.ElektroProductTypes;
 import org.example.entity.enums.ShoeProductType;
 import org.example.entity.products.BaseProduct;

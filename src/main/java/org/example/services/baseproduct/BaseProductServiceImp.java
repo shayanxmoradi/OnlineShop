@@ -1,12 +1,8 @@
-package org.example.services;
+package org.example.services.baseproduct;
 
-import org.example.entity.User;
 import org.example.entity.products.BaseProduct;
-import org.example.repository.BaseProductRepo;
-import org.example.repository.user.UserRepository;
-import org.example.service.BaseEntityService;
+import org.example.repository.baseproduct.BaseProductRepo;
 import org.example.service.BaseEntityServiceImpl;
-import org.example.service.UserService;
 
 import java.util.List;
 

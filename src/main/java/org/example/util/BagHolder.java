@@ -1,14 +1,14 @@
 package org.example.util;
 
 public class BagHolder {
-    public Integer ShoppingBagId;
+    public Long ShoppingBagId;
 
-    public Integer getShoppingBagId() {
+    public Long getShoppingBagId() {
         return ShoppingBagId;
     }
 
 
-    public void setShoppingBagId(Integer shoppingBagId) {
+    public void setShoppingBagId(Long shoppingBagId) {
         ShoppingBagId = shoppingBagId;
     }
 }

@@ -1,7 +1,6 @@
-package org.example.services;
+package org.example.services.baseproduct;
 
 import org.example.entity.BaseEntity;
-import org.example.entity.products.BaseProduct;
 import org.example.service.BaseEntityService;
 
 import java.util.List;

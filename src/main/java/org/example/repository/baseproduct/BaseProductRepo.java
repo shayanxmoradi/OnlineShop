@@ -1,4 +1,4 @@
-package org.example.repository;
+package org.example.repository.baseproduct;
 
 import org.example.entity.products.BaseProduct;
 import org.example.repository.baseentitygenric.BaseEntityGenericRepository;

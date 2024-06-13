@@ -1,21 +1,24 @@
 package org.example.repository.shoppingbag;
 
 import org.example.entity.ShoppingBag;
-import org.example.entity.User;
-import org.example.entity.products.BaseProduct;
-import org.example.repository.BaseProductRepo;
 import org.example.repository.baseentitygenric.BaseEntityGenericRepositoryImpl;
 import org.example.util.AuthHolder;
+import org.example.util.BagHolder;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class ShoppingBagRepoImpl extends BaseEntityGenericRepositoryImpl<ShoppingBag, Long>
         implements ShoppingBagRepo {
     private final AuthHolder AUTH_HOLDER;
+    private final BagHolder BAG_HOLDER;
 
-    public ShoppingBagRepoImpl(Connection connection, AuthHolder authHolder) {
+    public ShoppingBagRepoImpl(Connection connection, AuthHolder authHolder, BagHolder bagHolder) {
         super(connection);
         AUTH_HOLDER = authHolder;
+        BAG_HOLDER = new BagHolder();
     }
 
     @Override
@@ -82,5 +85,26 @@ public class ShoppingBagRepoImpl extends BaseEntityGenericRepositoryImpl<Shoppin
     @Override
     public ShoppingBag update(ShoppingBag entity) {
         return null;
+    }
+
+    @Override
+    public ShoppingBag getShoppingBagByUserId(Long id) throws SQLException {
+        ShoppingBag shoppingBag = null;
+
+        String query = String.format("""
+                SELECT * from %s where user_id_fk = ?
+                """, getTableName());
+
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, id.intValue());
+
+        ResultSet resultSet = preparedStatement.executeQuery();
+        if (resultSet.next()) {
+            shoppingBag = mapResultSetToBaseEntity(resultSet);
+            BAG_HOLDER.setShoppingBagId((Long) shoppingBag.getId());
+        }
+        resultSet.close();
+        preparedStatement.close();
+        return shoppingBag;
     }
 }
