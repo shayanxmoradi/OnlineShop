@@ -18,8 +18,8 @@ public class BagItemServiceImpl implements BagItemService {
     }
 
     @Override
-    public boolean removeItemFromBag(Long productId, Long shoppingBagId) {
-        return bagItemRepo.removeItemFromBag(productId, shoppingBagId);
+    public boolean removeItemFromBag(Long productId) {
+        return bagItemRepo.removeItemFromBag(productId);
     }
 
     @Override

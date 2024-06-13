@@ -9,7 +9,7 @@ public interface BagItemRepo
         extends BaseEntityGenericRepository {
     boolean addItemToBag(Long productId, Long shoppingBagId, double price);
 
-    boolean removeItemFromBag(Long productId, Long shoppingBagId);
+    boolean removeItemFromBag(Long productId);
 
     Integer getItemCountInBag(Long productId, Long shoppingBagId);
 

@@ -32,11 +32,17 @@ public class BagItemsRepoImpl
         int currentQuatity = 0;
         currentQuatity = getItemCountInBag(productId, shoppingBagId);
 
+        if (currentQuatity + 1 > getMaxAviableProduct(productId)) {
+            System.out.println("Sorry,but you cant add more than this from this item" +
+                               "cause we are out of Stock .");
+            return false;
+        }
+
 //todo check if we have enough of that product
 
         String insertQuery = """
                             
-                    INSERT INTO shopping_bag_items (bag_id, product_id, quantity, price_per_item) 
+                    INSERT INTO shopping_bag_items (bag_id, product_id, quantity, price_per_unit) 
                 VALUES (?, ?, ?,?)
                 ON CONFLICT (bag_id, product_id)
                 DO UPDATE SET quantity =
@@ -103,17 +109,29 @@ public class BagItemsRepoImpl
 
 
     @Override
-    public boolean removeItemFromBag(Long productId, Long shoppingBagId) {
+    public boolean removeItemFromBag(Long productId) {
         //todo if quantity ==0
         int currentQuatity = 0;
+        String deleteQuery = "DELETE FROM shopping_bag_items WHERE bag_id = ? AND product_id = ?";
+
         try {
 
-            currentQuatity = getItemCountInBag(productId, shoppingBagId);
-            if (currentQuatity <= 0) {
+            currentQuatity = getItemCountInBag(productId, BAG_HOLDER.getShoppingBagId());
+            if (currentQuatity < 0) {
                 return false;
             }
+            if (currentQuatity == 1) {
+
+                try (PreparedStatement deleteStmt = connection.prepareStatement(deleteQuery)) {
+                    deleteStmt.setInt(1, BAG_HOLDER.ShoppingBagId.intValue());
+                    deleteStmt.setInt(2, productId.intValue());
+                    deleteStmt.executeUpdate();
+                    return true;
+                }
+
+            }
         } catch (Exception e) {
-            return false;
+            throw new RuntimeException();
         }
 
 //todo check if we have enough of that product
@@ -131,7 +149,7 @@ public class BagItemsRepoImpl
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
             preparedStatement.setInt(3, (--currentQuatity));
-            preparedStatement.setInt(1, shoppingBagId.intValue());
+            preparedStatement.setInt(1, BAG_HOLDER.ShoppingBagId.intValue());
             preparedStatement.setInt(2, productId.intValue());
 
 
@@ -148,12 +166,35 @@ public class BagItemsRepoImpl
     @Override
     public Integer getItemCountInBag(Long productId, Long shoppingBagId) {
         String insertQuery = """
-                SELECT * FROM %s WHERE product_id = ? AND bag_id = ?
-                 """.formatted(getTableName());
+                       SELECT * FROM shopping_bag_items
+                WHERE bag_id = ? AND product_id = ?                
+                        """;
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+            preparedStatement.setInt(2, productId.intValue());
+            preparedStatement.setInt(1, shoppingBagId.intValue());
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                System.out.println("XXXX curent quentitat" + resultSet.getInt("quantity"));
+                return resultSet.getInt("quantity");
+            }
+        } catch (SQLException sqlException) {
+            throw new RuntimeException(sqlException);
+        }
+
+        return 0;
+    }
+
+    public Integer getMaxAviableProduct(Long productId) {
+        String insertQuery = """
+                                       SELECT* FROM product
+                where id = ?                
+                                        """;
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
             preparedStatement.setInt(1, productId.intValue());
-            preparedStatement.setInt(2, shoppingBagId.intValue());
+            //    preparedStatement.setInt(1, BAG_HOLDER.ShoppingBagId.intValue());
 
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
@@ -165,6 +206,7 @@ public class BagItemsRepoImpl
 
         return 0;
     }
+
 
     @Override
     public ShoppingBag getShoppingBagItemsByBagId() throws SQLException {

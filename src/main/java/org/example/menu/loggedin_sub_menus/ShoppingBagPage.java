@@ -30,8 +30,7 @@ public class ShoppingBagPage {
             switch (INPUT.scanner.next()) {
 
                 case "1" -> {
-                    System.out.println("here is List of shopping bags: , if you want to remove/reduce " +
-                                       "enter product numbber ");
+                    System.out.println("here is List of shopping bags:  ");
                     try {
                         ShoppingBag shoppingBag = BAG_ITEM_SERVICE.getShoppingBagItemsByBagId();
                         System.out.println("Total price of Bag : " + shoppingBag.getTotalPrice());
@@ -39,6 +38,21 @@ public class ShoppingBagPage {
                             System.out.println("item number : " + i);
                             System.out.println(shoppingBag.getProductsInShoppingCart().get(i - 1));
                         }
+                        System.out.println("if you want to remove reduce Enter R");
+                        if (INPUT.scanner.next().toLowerCase().equals("r")) {
+                            System.out.println("ENTER Item Nummber wich you want to reduce");
+                            int itemNumber = INPUT.scanner.nextInt();
+                            while (itemNumber >= shoppingBag.getProductsInShoppingCart().size() + 1 ||
+                                   itemNumber <= 0) {
+                                System.out.println(MESSAGE.getInvalidInputMessage());
+                                System.out.println("enter Item Nummber wich you want to reduce");
+                                itemNumber = INPUT.scanner.nextInt();
+                            }
+                            BAG_ITEM_SERVICE.removeItemFromBag(shoppingBag.getProductsInShoppingCart().get(itemNumber - 1).getProductId());
+
+
+                        }
+
                     } catch (SQLException e) {
                         throw new RuntimeException(e);
                     }
