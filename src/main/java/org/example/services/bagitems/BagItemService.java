@@ -1,9 +1,16 @@
 package org.example.services.bagitems;
 
-public interface BagItemService {
-    boolean addItemToBag(Long productId, Long shoppingBagId);
+import org.example.entity.ShoppingBag;
 
-    boolean removeItemFromBag(Long productId, Long shoppingBagId);
+import java.sql.SQLException;
+
+public interface BagItemService {
+    boolean addItemToBag(Long productId, Long shoppingBagId, double price);
+
+    boolean removeItemFromBag(Long productId);
 
     Integer getItemCountInBag(Long productId, Long shoppingBagId);
+
+    ShoppingBag getShoppingBagItemsByBagId() throws SQLException;
+
 }

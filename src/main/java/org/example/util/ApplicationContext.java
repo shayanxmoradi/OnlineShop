@@ -50,7 +50,7 @@ public class ApplicationContext {
 
         BaseProductRepo baseProductRepo = new BaseProductRepoImpl(connection);
         ShoppingBagRepo shoppingBagRepo = new ShoppingBagRepoImpl(connection, authHolder, bagHolder);
-        BagItemRepo bagItemRepo = new BagItemsRepoImpl(connection);
+        BagItemRepo bagItemRepo = new BagItemsRepoImpl(connection, bagHolder);
 
 
         UserService userService = new UserServiceImpl(userRepo,authHolder,userRepo);
@@ -60,7 +60,7 @@ public class ApplicationContext {
         BagItemService bagItemService = new BagItemServiceImpl(bagItemRepo);
 
         SignUpMenu signUpMenu = new SignUpMenu(input, message, userService,shoppingBagService);
-        ShoppingBagPage shoppingBagPage = new ShoppingBagPage(input,message);
+        ShoppingBagPage shoppingBagPage = new ShoppingBagPage(input, message, bagItemService);
         CheckoutPage checkoutPage = new CheckoutPage(input,message);
         AllProductPage allProductPage = new AllProductPage(input, message, baseProductService, shoppingBagPage, checkoutPage, bagItemService, bagHolder);
         LoggedInMenu loggedInMenu = new LoggedInMenu(input, message,shoppingBagPage,allProductPage,checkoutPage);

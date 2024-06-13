@@ -57,7 +57,8 @@ public class AllProductPage {
 
                     BAGITEMSERVICE.addItemToBag(
                             allProductsTogether.get((num - 1)).getId(),
-                            BAG_HOLDER.ShoppingBagId
+                            BAG_HOLDER.ShoppingBagId,
+                            allProductsTogether.get((num - 1)).getPrice()
                     );
                     System.out.println(MESSAGE.getSuccessfulMessage("adding to Bag"));
                 } else System.out.println(MESSAGE.getInvalidInputMessage());
