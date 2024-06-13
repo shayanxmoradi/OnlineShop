@@ -37,7 +37,7 @@ public class LoggedInMenu {
                 case "4" -> {
                     break loggedInMenu;
                 }
-                default -> System.out.println(Message.getInvalidInputMessage());
+                default -> System.out.println(MESSAGE.getInvalidInputMessage());
 
             }
         }

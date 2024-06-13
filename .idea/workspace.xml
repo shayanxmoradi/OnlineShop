@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb355ed7-ed62-4313-ae9b-fe5784ec8abe" name="Changes" comment="added ShoppinItems services repos and methods. still need more implementtion and test.">
+    <list default="true" id="cb355ed7-ed62-4313-ae9b-fe5784ec8abe" name="Changes" comment="adding shopppingitems add fixed bug in DB datas. now adding works good . removed edited but should be checked again.">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081/storage_v2/_src_/database/postgres.edMnLQ/schema/online_shop.YtmpGw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7d1b3db0-76f5-4853-b26f-bdb1c7a7b081/storage_v2/_src_/database/postgres.edMnLQ/schema/online_shop.YtmpGw.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/LoginMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/userModule/org/example/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/userModule/org/example/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/ShoppingBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/ShoppingBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/products/ShoppingBagItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/products/ShoppingBagItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/MainMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/AllProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/AllProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/LoggedInMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/LoggedInMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/ShoppingBagPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/ShoppingBagPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/util/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/util/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/bagitems/BagItemRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/bagitems/BagItemRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/bagitems/BagItemsRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/bagitems/BagItemsRepoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/shoppingbag/ShoppingBagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/shoppingbag/ShoppingBagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/shoppingbag/ShoppingBagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/shoppingbag/ShoppingBagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/shoppingbag/ShoppingBagRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/shoppingbag/ShoppingBagRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/bagitems/BagItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/bagitems/BagItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/bagitems/BagItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/bagitems/BagItemServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1717786637427</updated>
       <workItem from="1717786638477" duration="15571000" />
-      <workItem from="1718288350092" duration="8159000" />
+      <workItem from="1718288350092" duration="12559000" />
     </task>
     <task id="LOCAL-00001" summary="added ShoppinItems services repos and methods. still need more implementtion and test.">
       <option name="closed" value="true" />
@@ -169,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718292378093</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="adding shopppingitems add fixed bug in DB datas. now adding works good . removed edited but should be checked again.">
+      <option name="closed" value="true" />
+      <created>1718298916270</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718298916270</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +206,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added ShoppinItems services repos and methods. still need more implementtion and test." />
-    <option name="LAST_COMMIT_MESSAGE" value="added ShoppinItems services repos and methods. still need more implementtion and test." />
+    <MESSAGE value="adding shopppingitems add fixed bug in DB datas. now adding works good . removed edited but should be checked again." />
+    <option name="LAST_COMMIT_MESSAGE" value="adding shopppingitems add fixed bug in DB datas. now adding works good . removed edited but should be checked again." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
