@@ -1,31 +1,29 @@
 package org.example.util;
 
 
-
 import org.example.config.DataSource;
 import org.example.entity.User;
-import org.example.menu.loggedin_sub_menus.AllProductPage;
-import org.example.menu.loggedin_sub_menus.CheckoutPage;
-import org.example.menu.loggedin_sub_menus.LoggedInMenu;
 import org.example.menu.LoginMenu;
 import org.example.menu.MainMenu;
 import org.example.menu.SignUpMenu;
+import org.example.menu.loggedin_sub_menus.AllProductPage;
+import org.example.menu.loggedin_sub_menus.CheckoutPage;
+import org.example.menu.loggedin_sub_menus.LoggedInMenu;
 import org.example.menu.loggedin_sub_menus.ShoppingBagPage;
 import org.example.menu.util.Input;
 import org.example.menu.util.Message;
-import org.example.repository.BaseProductRepo;
-import org.example.repository.BaseProductRepoImpl;
+import org.example.repository.baseproduct.BaseProductRepo;
+import org.example.repository.baseproduct.BaseProductRepoImpl;
 import org.example.repository.shoppingbag.ShoppingBagRepo;
 import org.example.repository.shoppingbag.ShoppingBagRepoImpl;
 import org.example.repository.user.UserRepository;
 import org.example.repository.user.UserRepositoryImpl;
 import org.example.service.UserService;
 import org.example.service.UserServiceImpl;
-import org.example.services.BaseProductService;
-import org.example.services.BaseProductServiceImp;
+import org.example.services.baseproduct.BaseProductService;
+import org.example.services.baseproduct.BaseProductServiceImp;
 import org.example.services.shoppingbag.ShoppingBagService;
 import org.example.services.shoppingbag.ShoppingBagServiceImpl;
-
 
 import java.sql.Connection;
 
@@ -47,7 +45,7 @@ public class ApplicationContext {
         BagHolder bagHolder = new BagHolder();
 
         BaseProductRepo baseProductRepo = new BaseProductRepoImpl(connection);
-        ShoppingBagRepo shoppingBagRepo = new ShoppingBagRepoImpl(connection,authHolder);
+        ShoppingBagRepo shoppingBagRepo = new ShoppingBagRepoImpl(connection, authHolder, bagHolder);
 
 
         UserService userService = new UserServiceImpl(userRepo,authHolder,userRepo);

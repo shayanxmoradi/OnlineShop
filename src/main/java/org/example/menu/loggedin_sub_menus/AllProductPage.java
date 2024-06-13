@@ -2,7 +2,7 @@ package org.example.menu.loggedin_sub_menus;
 
 import org.example.menu.util.Input;
 import org.example.menu.util.Message;
-import org.example.services.BaseProductService;
+import org.example.services.baseproduct.BaseProductService;
 
 import java.util.List;
 
