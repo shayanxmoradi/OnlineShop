@@ -12,6 +12,7 @@ public class CheckoutPage {
         INPUT = input;
     }
     public void show(){
-        System.out.println("hey welome to checkout");
+        System.out.println("SORRY  PAGE NOT FOUND !" +
+                           "-404 ");
     }
 }

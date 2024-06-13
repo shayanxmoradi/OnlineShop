@@ -1,6 +1,6 @@
 package org.example.services.shoppingbag;
 
-import org.example.entity.ShoppingBag;
+import org.example.entity.bag.ShoppingBag;
 import org.example.repository.baseentitygenric.BaseEntityGenericRepository;
 
 import java.sql.SQLException;

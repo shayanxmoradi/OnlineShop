@@ -1,4 +1,4 @@
-package org.example.entity.products;
+package org.example.entity.bag;
 
 
 import org.example.entity.BaseEntity;

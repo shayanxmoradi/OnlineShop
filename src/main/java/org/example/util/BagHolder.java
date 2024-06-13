@@ -3,6 +3,9 @@ package org.example.util;
 public class BagHolder {
     public Long ShoppingBagId;
 
+    public void rest() {
+        ShoppingBagId = null;
+    }
     public Long getShoppingBagId() {
         return ShoppingBagId;
     }

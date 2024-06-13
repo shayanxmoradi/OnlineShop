@@ -63,7 +63,7 @@ public class ApplicationContext {
         ShoppingBagPage shoppingBagPage = new ShoppingBagPage(input, message, bagItemService);
         CheckoutPage checkoutPage = new CheckoutPage(input,message);
         AllProductPage allProductPage = new AllProductPage(input, message, baseProductService, shoppingBagPage, checkoutPage, bagItemService, bagHolder);
-        LoggedInMenu loggedInMenu = new LoggedInMenu(input, message,shoppingBagPage,allProductPage,checkoutPage);
+        LoggedInMenu loggedInMenu = new LoggedInMenu(input, message, shoppingBagPage, allProductPage, checkoutPage, bagHolder);
 
 
         LoginMenu loginMenu = new LoginMenu(input, message, userService, authHolder, loggedInMenu, shoppingBagService, bagHolder);

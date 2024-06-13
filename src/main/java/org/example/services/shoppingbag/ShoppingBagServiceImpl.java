@@ -1,6 +1,6 @@
 package org.example.services.shoppingbag;
 
-import org.example.entity.ShoppingBag;
+import org.example.entity.bag.ShoppingBag;
 import org.example.repository.shoppingbag.ShoppingBagRepo;
 import org.example.service.BaseEntityServiceImpl;
 

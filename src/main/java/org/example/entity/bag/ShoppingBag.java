@@ -1,6 +1,6 @@
-package org.example.entity;
+package org.example.entity.bag;
 
-import org.example.entity.products.ShoppingBagItems;
+import org.example.entity.BaseEntity;
 
 import java.util.List;
 

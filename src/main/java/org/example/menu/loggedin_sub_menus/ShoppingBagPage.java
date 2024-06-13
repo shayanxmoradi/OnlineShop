@@ -1,6 +1,6 @@
 package org.example.menu.loggedin_sub_menus;
 
-import org.example.entity.ShoppingBag;
+import org.example.entity.bag.ShoppingBag;
 import org.example.menu.util.Input;
 import org.example.menu.util.Message;
 import org.example.services.bagitems.BagItemService;
