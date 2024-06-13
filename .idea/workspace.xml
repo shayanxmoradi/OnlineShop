@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb355ed7-ed62-4313-ae9b-fe5784ec8abe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/bagitems/BagItemRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/bagitems/BagItemsRepoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/bagitems/BagItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/bagitems/BagItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cb355ed7-ed62-4313-ae9b-fe5784ec8abe" name="Changes" comment="added ShoppinItems services repos and methods. still need more implementtion and test.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/LoginMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/AllProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/loggedin_sub_menus/AllProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/BaseProductRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/baseproduct/BaseProductRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/BaseProductRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/baseproduct/BaseProductRepoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/shoppingbag/ShoppingBagRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/shoppingbag/ShoppingBagRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/shoppingbag/ShoppingBagRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/shoppingbag/ShoppingBagRepoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/BaseProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/baseproduct/BaseProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/BaseProductServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/baseproduct/BaseProductServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/bagitems/BagItemsRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/bagitems/BagItemsRepoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/shoppingbag/ShoppingBagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/shoppingbag/ShoppingBagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/shoppingbag/ShoppingBagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/shoppingbag/ShoppingBagServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/ApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/BagHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/BagHolder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,8 +159,17 @@
       <option name="presentableId" value="Default" />
       <updated>1717786637427</updated>
       <workItem from="1717786638477" duration="15571000" />
-      <workItem from="1718288350092" duration="2819000" />
+      <workItem from="1718288350092" duration="8159000" />
     </task>
+    <task id="LOCAL-00001" summary="added ShoppinItems services repos and methods. still need more implementtion and test.">
+      <option name="closed" value="true" />
+      <created>1718292378093</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718292378093</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +185,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added ShoppinItems services repos and methods. still need more implementtion and test." />
+    <option name="LAST_COMMIT_MESSAGE" value="added ShoppinItems services repos and methods. still need more implementtion and test." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -21,24 +21,26 @@ public class BagItemsRepoImpl
 
     @Override
     public boolean addItemToBag(Long productId, Long shoppingBagId) {
-        //todo if quantity ==0
         int currentQuatity = 0;
-        try {
+        currentQuatity = getItemCountInBag(productId, shoppingBagId);
 
-            currentQuatity = getItemCountInBag(productId, shoppingBagId);
-        } catch (Exception e) {
-            //not found :)
-        }
+//todo check if we have enough of that product
 
         String insertQuery = """
-                insert into %s (bag_id,product_id,quantity) values (?,?)
-                """;
+                            
+                    INSERT INTO shopping_bag_items (bag_id, product_id, quantity)
+                VALUES (?, ?, ?)
+                ON CONFLICT (bag_id, product_id)
+                DO UPDATE SET quantity =
+                    EXCLUDED.quantity;
+                            
+                    """;
         insertQuery.formatted(getTableName());
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+            preparedStatement.setInt(3, (++currentQuatity));
             preparedStatement.setInt(1, shoppingBagId.intValue());
             preparedStatement.setInt(2, productId.intValue());
-            preparedStatement.setInt(2, (++currentQuatity));
 
 
             if (preparedStatement.executeUpdate() > 0) {
@@ -98,21 +100,30 @@ public class BagItemsRepoImpl
         try {
 
             currentQuatity = getItemCountInBag(productId, shoppingBagId);
+            if (currentQuatity <= 0) {
+                return false;
+            }
         } catch (Exception e) {
             return false;
-
-            //not found :)
         }
 
+//todo check if we have enough of that product
+
         String insertQuery = """
-                insert into %s (bag_id,product_id,quantity) values (?,?)
-                """;
+                            
+                    INSERT INTO shopping_bag_items (bag_id, product_id, quantity)
+                VALUES (?, ?, ?)
+                ON CONFLICT (bag_id, product_id)
+                DO UPDATE SET quantity =
+                    EXCLUDED.quantity;
+                            
+                    """;
         insertQuery.formatted(getTableName());
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+            preparedStatement.setInt(3, (--currentQuatity));
             preparedStatement.setInt(1, shoppingBagId.intValue());
             preparedStatement.setInt(2, productId.intValue());
-            preparedStatement.setInt(2, (--currentQuatity));
 
 
             if (preparedStatement.executeUpdate() > 0) {
@@ -128,13 +139,12 @@ public class BagItemsRepoImpl
     @Override
     public Integer getItemCountInBag(Long productId, Long shoppingBagId) {
         String insertQuery = """
-                SELECT * FROM %s WHERE product_id = ? AND shopping_bag_id = ?
-                 """;
-        insertQuery.formatted(getTableName());
+                SELECT * FROM %s WHERE product_id = ? AND bag_id = ?
+                 """.formatted(getTableName());
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
-            preparedStatement.setInt(1, shoppingBagId.intValue());
             preparedStatement.setInt(1, productId.intValue());
+            preparedStatement.setInt(2, shoppingBagId.intValue());
 
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
