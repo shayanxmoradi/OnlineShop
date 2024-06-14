@@ -1,7 +1,6 @@
 package org.example;
 
 import org.example.util.ApplicationContext;
-import org.example.util.ApplicationProperties;
 
 import java.sql.SQLException;
 
@@ -11,4 +10,5 @@ public class Main {
     public static void main(String[] args) throws SQLException {
         ApplicationContext.getInstance().getMenu().show();
     }
+
 }
