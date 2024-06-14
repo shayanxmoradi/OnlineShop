@@ -10,36 +10,33 @@ public class Message {
     private static final String failedMessage = "%s failed";
 
 
-
-    public static String getMenuName(String menu) {
+    public String getMenuName(String menu) {
         return String.format(menuName, menu);
     }
-    public static String getInvalidInputMessage() {
+
+    public String getInvalidInputMessage() {
         return invalidInputMessage;
     }
 
 
-
-
-    public static String getInputMessage(String input) {
+    public String getInputMessage(String input) {
         return String.format(inputMessage, input);
     }
 
-    public static String getExistMessage(String input) {
+    public String getExistMessage(String input) {
         return String.format(existMessage, input);
     }
 
 
-
-    public static String getSuccessfulMessage(String input) {
+    public String getSuccessfulMessage(String input) {
         return String.format(successfulMessage, input);
     }
 
-    public static String getNotFoundMessage(String input) {
+    public String getNotFoundMessage(String input) {
         return String.format(notFoundMessage, input);
     }
 
-    public static String getFailedMessage(String input) {
+    public String getFailedMessage(String input) {
         return String.format(failedMessage, input);
     }
 }

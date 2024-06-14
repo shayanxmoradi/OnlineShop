@@ -22,7 +22,7 @@ public class MainMenu {
         meinMenu:
         while (true) {
 
-            System.out.println(Message.getMenuName("mainMenu"));
+            System.out.println(MESSAGE.getMenuName("mainMenu"));
             System.out.println("""
                     Chose an Option
                     1 -> Sign Up Menu
